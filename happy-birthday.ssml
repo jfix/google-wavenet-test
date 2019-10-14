@@ -1,0 +1,20 @@
+`<speak>
+    <seq>
+        <par>
+            <media xml:id="backgroundMusic1">
+                <audio soundLevel="+5dB" src="https://lavazza-space.herokuapp.com/sounds/happy-birthday.mp3"/>
+            </media>
+            <media xml:id="personalisation" begin="backgroundMusic1.begin+12s">
+                <speak><emphasis level="strong">Dear ${birthdayChild}</emphasis></speak>
+            </media>
+        </par>
+        <par>
+            <media xml:id="backgroundMusic2">
+                <audio soundLevel="+10dB" src="https://lavazza-space.herokuapp.com/sounds/happy-birthday.mp3"/>
+            </media>
+            <media xml:id="personalisation" begin="backgroundMusic2.begin+12s">
+                <speak><emphasis level="strong">Dear ${birthdayChild}</emphasis></speak>
+            </media>
+        </par>
+    </seq>
+</speak>`
