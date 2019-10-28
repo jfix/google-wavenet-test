@@ -2,3 +2,6 @@ node_modules
 .DS_Store
 .vscode
 test-wavenet-tts*.json
+1-*.mp3
+2-*.mp3
+3-*.mp3
