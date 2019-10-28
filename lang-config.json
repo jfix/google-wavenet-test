@@ -1,0 +1,28 @@
+{
+    "en": {
+        "languageCode": "en-GB",
+        "intro": {
+            "start": "<speak><emphasis level='moderate'>Hello!</emphasis> <break time='800ms'/> The following is an audio abstract for \"${pubTitle}\"<break time='1s'/></speak>",
+            "end": "<speak><break time='1s'/>You've been listening to an audio abstract of \"${pubTitle}\" which you can read in its entirety on OECD i-Library as of <say-as interpret-as='date' format='yyyy-mm-dd' detail='1'>${pubDate}</say-as>. <break time='1s'/> If you don't mind, we'd like you to tell us what you think of this new audio abstract service. <break time='1s'/>You find the link to a short survey in the track description. <break time='1s'/><emphasis level='moderate'>Thank you!</emphasis></speak>",
+            "languageName": "en-GB-Wavenet-A",
+            "ssmlGender": "FEMALE"
+        },
+        "abstract": {
+            "languageName": "en-GB-Wavenet-B",
+            "ssmlGender": "MALE"
+        }
+    },
+    "fr": {
+        "languageCode": "fr-FR",
+        "intro": {
+            "start": "<speak><emphasis level='moderate'>Bonjour!</emphasis> <break time='800ms'/> Ce qui suit est un résumé audio de la publication \"${pubTitle}\"<break time='1s'/></speak>",
+            "end": "<speak><break time='1s'/>Vous venez d'écouter un résumé audio de la publication \"${pubTitle}\" que vous pouvez lire entièrement sur OECD i-Library à partir du <say-as interpret-as='date' format='yyyy-mm-dd' detail='1'>${pubDate}</say-as>. <break time='1s'/> Si vous avez une minute, nous aimerions avoir votre avis sur ce nouveau service. <break time='1s'/>Vous trouverez un lien vers le questionnaire dans la description du résumé. <break time='1s'/><emphasis level='moderate'>Merci beaucoup!</emphasis></speak>",
+            "languageName": "fr-FR-Wavenet-C",
+            "ssmlGender": "FEMALE"
+        },
+        "abstract": {
+            "languageName": "fr-FR-Wavenet-B",
+            "ssmlGender": "MALE"
+        }
+    }
+}
