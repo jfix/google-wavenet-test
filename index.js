@@ -12,6 +12,8 @@ const langConfig = require('./lang-config.json')
 
 const audioConfig = JSON.parse(fs.readFileSync(argv._[0]))
 
+const outputDir = "output"
+
 audioConfig.forEach(item => {
     const pubId = item.id
     const pubTitle = item.title
@@ -28,22 +30,22 @@ audioConfig.forEach(item => {
 
     // console.log(intro, abstract, outro)
     Promise.all([
-        createAudio(intro, `1-${pubId}.mp3`, "ssml", {
+        createAudio(intro, `${outputDir}/1-${pubId}.mp3`, "ssml", {
             languageCode: langCfg.languageCode,
             name: langCfg.intro.languageName,
             ssmlGender: langCfg.intro.ssmlGender
         }),
-        createAudio(abstract, `2-${pubId}.mp3`, "ssml", {
+        createAudio(abstract, `${outputDir}/2-${pubId}.mp3`, "ssml", {
             languageCode: langCfg.languageCode, 
             name:  langCfg.abstract.languageName,
             ssmlGender: langCfg.abstract.ssmlGender
         }),
-        createAudio(outro, `3-${pubId}.mp3`, "ssml", {
+        createAudio(outro, `${outputDir}/3-${pubId}.mp3`, "ssml", {
             languageCode: langCfg.languageCode,
             name: langCfg.intro.languageName,
             ssmlGender: langCfg.intro.ssmlGender
         })
     ]).then(() => {
-        concatAudio([`1-${pubId}.mp3`, `2-${pubId}.mp3`, `3-${pubId}.mp3`], `0-${pubId}.mp3`)
+        concatAudio([`${outputDir}/1-${pubId}.mp3`, `${outputDir}/2-${pubId}.mp3`, `${outputDir}/3-${pubId}.mp3`], `${outputDir}/${pubId}.mp3`)
     })
 })
